@@ -1,6 +1,4 @@
-import 'package:apifetch/Post.dart';
-import 'package:apifetch/abc.dart';
-import 'package:apifetch/fetch.dart';
+import 'package:apifetch/photos.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: SafeArea(child: Post()),
+      home: SafeArea(child: Fetch2()),
     );
   }
 }
