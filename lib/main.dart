@@ -1,5 +1,4 @@
-import 'package:apifetch/practice/practice_employee_api.dart';
-import 'package:apifetch/practice/product_fetch.dart';
+import 'package:apifetch/practice/post_api.2.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SafeArea(child: ProductFetch()),
+      home: SafeArea(child: PostApiUserCreation()),
     );
   }
 }

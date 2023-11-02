@@ -34,18 +34,18 @@ class ComplexModel {
     final Map<String, dynamic> data = new Map<String, dynamic>();
 
 //  final Map<String,dynamic> =  data new Map<String,dynamic>();
-    data['id'] = this.id;
-    data['name'] = this.name;
-    data['username'] = this.username;
-    data['email'] = this.email;
-    data['website'] = this.website;
-    if (this.address != null) {
-      data['address'] = this.address!.toJson();
+    data['id'] = id;
+    data['name'] = name;
+    data['username'] = username;
+    data['email'] = email;
+    data['website'] = website;
+    if (address != null) {
+      data['address'] = address!.toJson();
     }
-    if (this.company != null) {
-      data['company'] = this.address!.toJson();
+    if (company != null) {
+      data['company'] = address!.toJson();
     }
-    data['phone'] = this.phone;
+    data['phone'] = phone;
 
     return data;
   }
@@ -60,23 +60,23 @@ class Address {
   Address({this.street, this.city, this.zipcode, this.suite, this.geo});
 
   Address.fromJson(Map<String, dynamic> json) {
-    this.street = json['street'];
-    this.city = json['city'];
-    this.zipcode = json['zipcode'];
-    this.suite = json['suite'];
-    this.geo = json['geo'] != null ? new Geo.fromJson(json['geo']) : null;
+    street = json['street'];
+    city = json['city'];
+    zipcode = json['zipcode'];
+    suite = json['suite'];
+    geo = json['geo'] != null ? new Geo.fromJson(json['geo']) : null;
   }
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
 
 //  final Map<String,dynamic> =  data new Map<String,dynamic>();
-    data['street'] = this.street;
-    data['city'] = this.city;
-    data['suite'] = this.suite;
-    data['zipcode'] = this.zipcode;
-    if (this.geo != null) {
-      data['geo'] = this.geo!.toJson();
+    data['street'] = street;
+    data['city'] = city;
+    data['suite'] = suite;
+    data['zipcode'] = zipcode;
+    if (geo != null) {
+      data['geo'] = geo!.toJson();
     }
 
     return data;
@@ -93,14 +93,14 @@ class Geo {
   });
 
   Geo.fromJson(Map<String, dynamic> json) {
-    this.long = json['lng'];
-    this.lat = json['lat'];
+    long = json['lng'];
+    lat = json['lat'];
   }
 
   Map<String, dynamic> toJson() {
-    Map<String, dynamic> data = new Map<String, dynamic>();
-    data['longitude'] = this.long;
-    data['latitude'] = this.lat;
+    Map<String, dynamic> data = Map<String, dynamic>();
+    data['longitude'] = long;
+    data['latitude'] = lat;
 
     return data;
   }
